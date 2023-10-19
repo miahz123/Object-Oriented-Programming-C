@@ -1,10 +1,10 @@
 /***
  * CSE 2010 Fall 2023
- * Lab #{n}
- * {Student Name} #{Coyote ID}
- * {Date}
+ * Lab #3
+ * Jeremiah Rivera 007634309
+ * 10/13/2023
  *
- * {Description of lab AKA paraphrase "abstract" section from lab}
+ * In this lab, we will be creating class objects, they will use private variables and manipulate the objects using mutator functions and link the files together.
  *
  * {Describe 1) what was most challenging and 2) how you solved/overcame the problem OR
  * the directions of how you PLAN to solve it}
@@ -41,5 +41,33 @@ int main()
     cout << bob.getName() << endl;
     Person unknown = Person(); //Person unknown; // 
     cout << unknown.getName() << endl;
+
+    cout << "Test Age\n";
+    cout << bob.getAge() << endl;
+    bob.updateAge(101);
+    cout << bob.getAge() << endl;
+
+    cout << "test Occupation\n";
+    cout << bob.getOccupation() << endl;
+    bob.updateOccupation("consultant");
+    cout << bob.getOccupation() << endl;
+
+    cout << "test lives_in_IE\n";
+    cout << bob.getLivesInIE() << endl;
+    bob.movedLocation();
+    cout << bob.getLivesInIE() << endl;
+    bob.movedLocation();
+    cout << bob.getLivesInIE() << endl;
+
+    cout << "test older than\n";
+    cout << bob.getName() << ':' << bob.getAge() << endl;
+    unknown.updateAge(10);
+    unknown.updateName("Jeremiah");
+    cout << unknown.getName() << ':' << unknown.getAge() << endl;
+    if (bob.isOlderThan(unknown)){
+        cout << "True" << endl;
+    } else {
+        cout << "False" << endl;
+    }
 }
 
