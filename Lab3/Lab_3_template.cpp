@@ -6,8 +6,8 @@
  *
  * In this lab, we will be creating class objects, they will use private variables and manipulate the objects using mutator functions and link the files together.
  *
- * {Describe 1) what was most challenging and 2) how you solved/overcame the problem OR
- * the directions of how you PLAN to solve it}
+ * What was most challenging was figuring out how to write out creating the object then calling for the functions.
+ * 
  *
 ***/
 
