@@ -6,13 +6,13 @@
  *
  * We will derive a class from a base class and understand how member functions and variables can be passed down to the derived class while applying virtual and overloaded functions to practice polymorphisms.
  *
- * {Describe 1) what was most challenging and 2) how you solved/overcame the problem OR
- * the directions of how you PLAN to solve it}
+ * Creating my own UML diagram for my own pokemon was a struggle. I solved it by following the structure for UML very closely.
  *
 ***/
 
 #include <iostream>
 #include "Charmander.h"
+#include "Vaporeon.h"
 using namespace std;
 
 int main()
@@ -22,24 +22,28 @@ int main()
     pokemonType.push_back("Fire");
 
     cout << "-------Constructor Created---------\n";
-    Charmander charlie = Charmander("Charlie", 100, 4, 4, pokemonType);
+    //Charmander charlie = Charmander("Charlie", 100, 4, 4, pokemonType);
+    Vaporeon Sapphire = Vaporeon("Sapphire", 130, 65, 60, pokemonType);
 
     // Charmander
     cout << "\n-------Direct Speak---------\n";
-    charlie.speak();
+    //charlie.speak();
+    Sapphire.speak();
     
-    // Pokemon pointer to Charmander
-    Pokemon * p1 = &charlie ;
-    cout << "\n------- Speak called from Pokemon Pointer---------\n";
+    // Pokemon pointer to Vaporeon
+   // Pokemon * p1 = &charlie ;
+    Pokemon * p1 = &Sapphire ;
+    //cout << "\n------- Speak called from Pokemon Pointer---------\n";
     (*p1).speak();
 
-    // Charmander pointer to Charmander
-    Charmander * c1 = &charlie ;
-    cout << "\n------- Speak called from Charmander Pointer---------\n";
+    // Vaporeon pointer to Vaporeon
+    Vaporeon * c1 = &Sapphire ;
+    cout << "\n------- Speak called from Sapphire Pointer---------\n";
     (*c1).speak();
 
-    // Charmander
+    // Vaporeon
     cout << "\n------- Print Stats---------\n";
-    charlie.printStats();
+    //charlie.printStats();
+    Sapphire.printStats();
 }
 
