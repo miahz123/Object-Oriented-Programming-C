@@ -6,7 +6,7 @@
  *
  * We will learn how to use generic programming through templates, expanding on previous classes to have members that can hold and process through various data types.
  *
- * 
+ * I ran into no issues on this lab. The instructions were clear and everything went smoothly. The only issue to say would be missing a ";" at the end of a line, but that's about it.
  *
 ***/
 //Lab_7.cpp
@@ -18,11 +18,12 @@ int main()
 {
     // initialize arr
     const int CAPACITY = 10;
-    int test_arr[CAPACITY];
+    double test_arr[CAPACITY];
 
+    string data_type = "double";
     //initialize ArrayVec and DisplayArr
-    DisplayArr disp = DisplayArr();
-    ArrayVec av = ArrayVec();
+    DisplayArr<double> disp = DisplayArr<double>(data_type);
+    ArrayVec<double> av = ArrayVec<double>();
 
     // populate with values
     int range = 15;

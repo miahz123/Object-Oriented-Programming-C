@@ -4,7 +4,8 @@
  * @brief Default Constuctor
  *
  */
-ArrayVec::ArrayVec()
+template <typename T>
+ArrayVec<T>::ArrayVec()
 {
 
 }
@@ -17,7 +18,8 @@ ArrayVec::ArrayVec()
  * @param n
  * @param exclusive_range
  */
-void ArrayVec::randGenArr(int arr[], int n, int exclusive_range){
+template <typename T>
+void ArrayVec<T>::randGenArr(T arr[], int n, int exclusive_range){
     for(int i = 0; i < n; i++){
         arr[i] = rand() % exclusive_range;
     }
@@ -31,7 +33,8 @@ void ArrayVec::randGenArr(int arr[], int n, int exclusive_range){
  * @param n
  * @param exclusive_range
  */
-void ArrayVec::randGenVec(vector<int> & v, int n, int exclusive_range){
+template <typename T>
+void ArrayVec<T>::randGenVec(vector<T> & v, int n, int exclusive_range){
     for(int i = 0; i < n; i++){
         // v[i] = rand() % exclusive_range;
         v.push_back(rand() % exclusive_range);
@@ -44,7 +47,8 @@ void ArrayVec::randGenVec(vector<int> & v, int n, int exclusive_range){
  * @param cap (capacity)
  * @return int
  */
-int ArrayVec::getSize(const int arr[], int cap){
+template <typename T>
+int ArrayVec<T>::getSize(const T arr[], int cap){
     int size = 0;
     for(int i = 0; i < cap; i++){
         if (arr[i] == -1){
@@ -54,3 +58,7 @@ int ArrayVec::getSize(const int arr[], int cap){
     }
     return size;
 }
+
+template class ArrayVec <int>;
+template class ArrayVec <float>;
+template class ArrayVec <double>;
